@@ -1,4 +1,4 @@
-name: Déploiement du projet
+name: Application React – Exécution des tests automatisés
 
 on:
   push:
