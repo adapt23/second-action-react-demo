@@ -4,11 +4,12 @@ on:
   push:
     branches:
       - main
-
   pull_request:
     types: [opened, reopened, edited]
-    branches: [main]
-
+    branches:
+      - main
+  issues:
+    types: [opened, closed]
   workflow_dispatch:
 
 jobs:
@@ -50,4 +51,6 @@ jobs:
 
       - name: Déploiement
         run: echo "Déploiement simulé terminé ..."
+      - name: Journaliser l’événement issue
+        run: echo "Une issue a été ${{ github.event.action }}"
    
